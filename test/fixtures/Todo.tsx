@@ -72,7 +72,9 @@ export const TodoApp = () => {
         )}
         <button
           onClick={() => {
-            addTodo({ variables: { input: { text: 'hardcoded' } } });
+            addTodo({ variables: { input: { text: 'hardcoded' } } }).catch(e =>
+              console.log('error occurred', e)
+            );
           }}
         >
           Add todo
